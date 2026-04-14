@@ -1,0 +1,61 @@
+{
+  "name": "x402-agent-tools",
+  "version": "1.0.0",
+  "description": "100 pre-built AI agent tools with x402 micropayments. Hyperliquid, prediction markets, trust scoring, B2B enrichment, web scraping, NLP, crypto data. Pay-per-call USDC on Base. Zero API keys.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./langchain": "./dist/langchain.js",
+    "./ai-sdk": "./dist/ai-sdk.js",
+    "./tools": "./dist/tools.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "x402",
+    "ai-agent",
+    "langchain",
+    "vercel-ai-sdk",
+    "tools",
+    "micropayments",
+    "usdc",
+    "base",
+    "hyperliquid",
+    "crypto",
+    "enrichment",
+    "web-scraper",
+    "trust-score",
+    "mcp"
+  ],
+  "author": "Br0ski777",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Br0ski777/x402-agent-tools"
+  },
+  "dependencies": {
+    "@x402/fetch": "^2.10.0",
+    "@x402/evm": "^2.10.0",
+    "viem": "^2.47.0"
+  },
+  "peerDependencies": {
+    "@langchain/core": "latest",
+    "ai": "latest"
+  },
+  "peerDependenciesMeta": {
+    "@langchain/core": {
+      "optional": true
+    },
+    "ai": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "typescript": "^6.0.2",
+    "zod": "^4.3.6"
+  }
+}
