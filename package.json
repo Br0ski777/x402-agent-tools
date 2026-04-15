@@ -1,7 +1,7 @@
 {
   "name": "x402-agent-tools",
-  "version": "1.0.0",
-  "description": "100 pre-built AI agent tools with x402 micropayments. Hyperliquid, prediction markets, trust scoring, B2B enrichment, web scraping, NLP, crypto data. Pay-per-call USDC on Base. Zero API keys.",
+  "version": "1.1.0",
+  "description": "103 production-ready AI agent tools with x402 micropayments. Hyperliquid DEX suite, prediction markets, DeFi liquidations, NFT data, trust scoring, B2B enrichment, web scraping, SEO, NLP, Solana, security audits. Pay-per-call USDC on Base. Zero API keys. 3-17x cheaper than competitors.",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
