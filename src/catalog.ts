@@ -21,7 +21,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "hyperliquid_data",
     description: "Hyperliquid perp markets: prices, open interest, 24h volume, orderbook depth for 229 markets",
-    url: "https://hyperliquid-data-production.up.railway.app",
+    url: "https://hyperliquid-data-x402-production.up.railway.app",
     price: "$0.001", category: "hyperliquid",
     parameters: { ticker: { type: "string", description: "Market symbol (BTC, ETH, SOL)" } },
     required: ["ticker"],
@@ -29,7 +29,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "hyperliquid_whales",
     description: "Track whale positions on Hyperliquid DEX. Top traders, position sizes, PnL, entry prices",
-    url: "https://hyperliquid-whales-production.up.railway.app",
+    url: "https://hyperliquid-whales-x402-production.up.railway.app",
     price: "$0.003", category: "hyperliquid",
     parameters: { ticker: { type: "string", description: "Perp symbol" }, minSize: { type: "number", description: "Min position USD" } },
     required: ["ticker"],
@@ -37,21 +37,21 @@ export const CATALOG: ApiTool[] = [
   {
     name: "hl_vaults",
     description: "Hyperliquid vault summaries: APR, TVL, PnL, depositor count",
-    url: "https://hl-vaults-production.up.railway.app",
+    url: "https://hl-vaults-x402-production.up.railway.app",
     price: "$0.003", category: "hyperliquid",
     parameters: { vaultAddress: { type: "string", description: "Vault address (optional)" } },
   },
   {
     name: "hl_funding",
     description: "Real-time and historical funding rates for 229 Hyperliquid perp markets. Arb scanner",
-    url: "https://hl-funding-production.up.railway.app",
+    url: "https://hl-funding-x402-production.up.railway.app",
     price: "$0.002", category: "hyperliquid",
     parameters: { ticker: { type: "string", description: "Market symbol" }, period: { type: "string", description: "Funding period", enum: ["current", "1h", "8h", "24h"] } },
   },
   {
     name: "hl_portfolio",
     description: "Hyperliquid account analysis: positions, PnL, fills, open orders, funding payments",
-    url: "https://hl-portfolio-production.up.railway.app",
+    url: "https://hl-portfolio-x402-production.up.railway.app",
     price: "$0.003", category: "hyperliquid",
     parameters: { walletAddress: { type: "string", description: "Wallet address (0x...)" } },
     required: ["walletAddress"],
@@ -59,7 +59,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "hl_spot",
     description: "Hyperliquid spot markets: 454 tokens, prices, volume, balances",
-    url: "https://hl-spot-production.up.railway.app",
+    url: "https://hl-spot-x402-production.up.railway.app",
     price: "$0.002", category: "hyperliquid",
     parameters: { token: { type: "string", description: "Token symbol" }, walletAddress: { type: "string", description: "Check balances" } },
   },
@@ -70,14 +70,14 @@ export const CATALOG: ApiTool[] = [
   {
     name: "prediction_markets",
     description: "Active prediction market events from Polymarket + Kalshi: probabilities, volume, trending",
-    url: "https://prediction-markets-production-3e07.up.railway.app",
+    url: "https://prediction-markets-x402-production.up.railway.app",
     price: "$0.005", category: "prediction",
     parameters: { query: { type: "string", description: "Search query" }, platform: { type: "string", description: "Platform filter", enum: ["polymarket", "kalshi", "all"] } },
   },
   {
     name: "event_resolver",
     description: "Settlement oracle for prediction markets: resolve outcomes, verify claims, check thresholds",
-    url: "https://event-resolver-production.up.railway.app",
+    url: "https://event-resolver-x402-production.up.railway.app",
     price: "$0.005", category: "prediction",
     parameters: { question: { type: "string", description: "Event question to verify" }, eventId: { type: "string", description: "Event ID" } },
     required: ["question"],
@@ -105,7 +105,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "gas_estimator",
     description: "Multi-chain gas prices in one call -- ETH, Base, Polygon, Arbitrum, BSC compared",
-    url: "https://gas-estimator-production-f7f1.up.railway.app",
+    url: "https://gas-estimator-x402-production.up.railway.app",
     price: "$0.002", category: "crypto",
     parameters: { chain: { type: "string", description: "Chain name: ethereum, base, polygon, arbitrum, bsc. Omit for all chains" } },
   },
@@ -135,21 +135,21 @@ export const CATALOG: ApiTool[] = [
   {
     name: "whale_alert",
     description: "Track large crypto transactions and whale movements",
-    url: "https://whale-alert-production-98b5.up.railway.app",
+    url: "https://whale-alert-x402-production.up.railway.app",
     price: "$0.003", category: "crypto",
     parameters: { chain: { type: "string", description: "Chain" }, minValue: { type: "number", description: "Min USD value" } },
   },
   {
     name: "crypto_news",
     description: "Real-time crypto news with sentiment scores",
-    url: "https://crypto-news-production-b0f2.up.railway.app",
+    url: "https://crypto-news-x402-production.up.railway.app",
     price: "$0.002", category: "crypto",
     parameters: { query: { type: "string", description: "Search query" }, limit: { type: "number", description: "Max results" } },
   },
   {
     name: "funding_arb",
     description: "Funding rate arbitrage opportunities across exchanges",
-    url: "https://funding-arb-production-1034.up.railway.app",
+    url: "https://funding-arb-x402-production.up.railway.app",
     price: "$0.005", category: "crypto",
     parameters: { minSpread: { type: "number", description: "Min spread %" } },
   },
@@ -164,7 +164,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "ens_resolver",
     description: "Resolve ENS names to addresses and reverse lookup",
-    url: "https://ens-resolver-production-891c.up.railway.app",
+    url: "https://ens-resolver-x402-production.up.railway.app",
     price: "$0.002", category: "crypto",
     parameters: { name: { type: "string", description: "ENS name or address" } },
     required: ["name"],
@@ -172,7 +172,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "token_holders",
     description: "Token holder distribution: whale count, concentration, top holders",
-    url: "https://token-holders-production.up.railway.app",
+    url: "https://token-holders-x402-production.up.railway.app",
     price: "$0.005", category: "crypto",
     parameters: { tokenAddress: { type: "string", description: "Token contract" }, chain: { type: "string", description: "Chain" } },
     required: ["tokenAddress"],
@@ -180,7 +180,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "token_ohlcv",
     description: "Historical OHLCV candles for any token",
-    url: "https://token-ohlcv-production.up.railway.app",
+    url: "https://token-ohlcv-x402-production.up.railway.app",
     price: "$0.002", category: "crypto",
     parameters: { token: { type: "string", description: "Token" }, timeframe: { type: "string", description: "Candle timeframe", enum: ["1m", "5m", "1h", "4h", "1d"] } },
     required: ["token"],
@@ -188,7 +188,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "airdrop_checker",
     description: "Check wallet eligibility for active crypto airdrops with token, value, deadline, and claim URL",
-    url: "https://airdrop-checker-production.up.railway.app",
+    url: "https://airdrop-checker-x402-production.up.railway.app",
     price: "$0.005", category: "crypto",
     parameters: { address: { type: "string", description: "Ethereum wallet address (0x...)" } },
     required: ["address"],
@@ -204,7 +204,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "currency_converter",
     description: "Real-time fiat (ECB) and crypto (CoinGecko) conversion",
-    url: "https://currency-converter-production-b190.up.railway.app",
+    url: "https://currency-converter-x402-production.up.railway.app",
     price: "$0.001", category: "crypto",
     parameters: { from: { type: "string", description: "Source currency" }, to: { type: "string", description: "Target currency" }, amount: { type: "number", description: "Amount" } },
     required: ["from", "to", "amount"],
@@ -216,7 +216,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "base_defi",
     description: "Base chain DeFi yields from Aerodrome LP and Moonwell lending, ranked by APY with TVL and risk",
-    url: "https://base-defi-production.up.railway.app",
+    url: "https://base-defi-x402-production.up.railway.app",
     price: "$0.003", category: "defi",
     parameters: { protocol: { type: "string", description: "Filter: all, aerodrome, or moonwell" } },
   },
@@ -230,7 +230,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "orderbook_depth",
     description: "Uniswap V3 liquidity depth -- price impact at 1/2/5/10% levels for slippage estimation",
-    url: "https://orderbook-depth-production.up.railway.app",
+    url: "https://orderbook-depth-x402-production.up.railway.app",
     price: "$0.005", category: "defi",
     parameters: { pool: { type: "string", description: "Uniswap V3 pool address (0x...)" }, chain: { type: "string", description: "Chain: base, ethereum (default: base)" } },
     required: ["pool"],
@@ -242,7 +242,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "nft_collection",
     description: "NFT collection floor price, volume, holders, and rarity data for Ethereum and Base",
-    url: "https://nft-floor-production.up.railway.app",
+    url: "https://nft-floor-x402-production.up.railway.app",
     price: "$0.005", category: "nft",
     parameters: { address: { type: "string", description: "NFT collection contract address" }, chain: { type: "string", description: "ethereum or base (default: ethereum)" } },
     required: ["address"],
@@ -250,7 +250,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "nft_rarity",
     description: "NFT token rarity rank, score, and trait floor prices for valuation",
-    url: "https://nft-floor-production.up.railway.app",
+    url: "https://nft-floor-x402-production.up.railway.app",
     price: "$0.003", category: "nft",
     parameters: { address: { type: "string", description: "NFT collection contract address" }, tokenId: { type: "string", description: "Token ID" }, chain: { type: "string", description: "ethereum or base" } },
     required: ["address", "tokenId"],
@@ -258,7 +258,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "nft_metadata",
     description: "NFT metadata lookup -- name, image, attributes, collection info from contract + token ID",
-    url: "https://nft-metadata-production.up.railway.app",
+    url: "https://nft-metadata-x402-production.up.railway.app",
     price: "$0.003", category: "nft",
     parameters: { contract: { type: "string", description: "NFT contract address" }, tokenId: { type: "string", description: "Token ID" }, chain: { type: "string", description: "ethereum or base (default: ethereum)" } },
     required: ["contract", "tokenId"],
@@ -270,14 +270,14 @@ export const CATALOG: ApiTool[] = [
   {
     name: "solana_launches",
     description: "New token launches on Solana: pump.fun, Raydium",
-    url: "https://solana-launches-production.up.railway.app",
+    url: "https://solana-launches-x402-production.up.railway.app",
     price: "$0.003", category: "solana",
     parameters: { source: { type: "string", description: "Launch source", enum: ["pumpfun", "raydium", "all"] } },
   },
   {
     name: "jupiter_quotes",
     description: "Jupiter aggregator swap quotes on Solana",
-    url: "https://jupiter-quotes-production.up.railway.app",
+    url: "https://jupiter-quotes-x402-production.up.railway.app",
     price: "$0.002", category: "solana",
     parameters: { inputMint: { type: "string", description: "Input token mint" }, outputMint: { type: "string", description: "Output token mint" }, amount: { type: "number", description: "Amount in lamports" } },
     required: ["inputMint", "outputMint", "amount"],
@@ -285,14 +285,14 @@ export const CATALOG: ApiTool[] = [
   {
     name: "solana_fees",
     description: "Solana priority fee estimates at 6 levels for transaction optimization",
-    url: "https://solana-fees-production.up.railway.app",
+    url: "https://solana-fees-x402-production.up.railway.app",
     price: "$0.001", category: "solana",
     parameters: { program: { type: "string", description: "Program ID for program-specific fees (optional)" } },
   },
   {
     name: "solana_pools",
     description: "Solana DEX pool liquidity depth -- TVL, slippage, volume, fee tier for Raydium, Orca, Meteora",
-    url: "https://solana-pools-production.up.railway.app",
+    url: "https://solana-pools-x402-production.up.railway.app",
     price: "$0.003", category: "solana",
     parameters: { mint: { type: "string", description: "Solana token mint address" } },
     required: ["mint"],
@@ -304,7 +304,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "trust_score",
     description: "Unified trust scoring for domains, wallets, APIs. SSL/DNS/WHOIS/headers. Score 0-100 with risk flags",
-    url: "https://trust-score-production-ff18.up.railway.app",
+    url: "https://trust-score-x402-production.up.railway.app",
     price: "$0.01", category: "security",
     parameters: { target: { type: "string", description: "Domain, wallet, or URL to score" }, type: { type: "string", description: "Target type", enum: ["domain", "wallet", "api"] } },
     required: ["target"],
@@ -328,7 +328,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "ssl_checker",
     description: "SSL/TLS certificate validity, expiry, issuer, chain details, and security grade",
-    url: "https://ssl-checker-production-3dda.up.railway.app",
+    url: "https://ssl-checker-x402-production.up.railway.app",
     price: "$0.002", category: "security",
     parameters: { domain: { type: "string", description: "Domain to check SSL certificate" } },
     required: ["domain"],
@@ -336,7 +336,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "http_headers",
     description: "Analyze HTTP response headers -- security score, HSTS/CSP check, server detection, caching config",
-    url: "https://http-headers-production.up.railway.app",
+    url: "https://http-headers-x402-production.up.railway.app",
     price: "$0.001", category: "security",
     parameters: { url: { type: "string", description: "Full URL to analyze" } },
     required: ["url"],
@@ -344,7 +344,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "port_scanner",
     description: "Scan TCP ports on any host -- open/closed status and response time",
-    url: "https://port-scanner-production-bdb2.up.railway.app",
+    url: "https://port-scanner-x402-production.up.railway.app",
     price: "$0.003", category: "security",
     parameters: { host: { type: "string", description: "Hostname or IP address to scan" }, ports: { type: "array", description: "Array of port numbers (default: 16 common ports)" } },
     required: ["host"],
@@ -352,7 +352,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "password_strength",
     description: "Password strength score 0-100, entropy bits, crack time estimate, improvement tips",
-    url: "https://password-strength-production.up.railway.app",
+    url: "https://password-strength-x402-production.up.railway.app",
     price: "$0.001", category: "security",
     parameters: { password: { type: "string", description: "Password to analyze" } },
     required: ["password"],
@@ -360,7 +360,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "jwt_decoder",
     description: "Decode and inspect JWT tokens -- header, payload, claims, expiry analysis",
-    url: "https://jwt-decoder-production.up.railway.app",
+    url: "https://jwt-decoder-x402-production.up.railway.app",
     price: "$0.001", category: "security",
     parameters: { token: { type: "string", description: "JWT token to decode (header.payload.signature)" } },
     required: ["token"],
@@ -423,7 +423,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "email_deliverability",
     description: "Email deliverability audit -- SPF, DKIM, DMARC, MX validation with score 0-100",
-    url: "https://email-deliverability-production.up.railway.app",
+    url: "https://email-deliverability-x402-production.up.railway.app",
     price: "$0.005", category: "email",
     parameters: { domain: { type: "string", description: "Domain to audit" } },
     required: ["domain"],
@@ -431,7 +431,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "email_send",
     description: "Send emails programmatically via Resend -- text or HTML, delivery status, message ID",
-    url: "https://email-send-production.up.railway.app",
+    url: "https://email-send-x402-production.up.railway.app",
     price: "$0.003", category: "email",
     parameters: { to: { type: "string", description: "Recipient email" }, from: { type: "string", description: "Sender email (default: noreply@x402.dev)" }, subject: { type: "string", description: "Email subject" }, body: { type: "string", description: "Email body (plain text)" }, html: { type: "string", description: "Email body (HTML, optional)" } },
     required: ["to", "subject", "body"],
@@ -467,7 +467,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "web_search",
     description: "Web search API for AI agents -- structured results: title, URL, snippet, up to 10 results",
-    url: "https://web-search-production-7393.up.railway.app",
+    url: "https://web-search-x402-production.up.railway.app",
     price: "$0.003", category: "web",
     parameters: { query: { type: "string", description: "Search query" }, count: { type: "number", description: "Results count (default: 5, max: 10)" } },
     required: ["query"],
@@ -475,7 +475,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "keyword_research",
     description: "SEO keyword research -- Google Suggest, intent classification, long-tail discovery",
-    url: "https://keyword-research-production-2ba5.up.railway.app",
+    url: "https://keyword-research-x402-production.up.railway.app",
     price: "$0.01", category: "web",
     parameters: { query: { type: "string", description: "Seed keyword or phrase" } },
     required: ["query"],
@@ -483,7 +483,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "webhook_tester",
     description: "Test webhook endpoints -- POST/PUT/PATCH/DELETE with custom headers and payloads, latency",
-    url: "https://webhook-tester-production-e956.up.railway.app",
+    url: "https://webhook-tester-x402-production.up.railway.app",
     price: "$0.002", category: "web",
     parameters: { url: { type: "string", description: "Webhook URL (must be https)" }, method: { type: "string", description: "HTTP method", enum: ["POST", "PUT", "PATCH", "DELETE"] }, headers: { type: "object", description: "Custom headers" }, body: { type: "object", description: "JSON body" }, timeout: { type: "number", description: "Timeout seconds (default: 10, max: 30)" } },
     required: ["url"],
@@ -495,7 +495,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "twitter_scraper",
     description: "Scrape Twitter/X profiles, search tweets, user timelines. No API key needed",
-    url: "https://twitter-scraper-production-a1e8.up.railway.app",
+    url: "https://twitter-scraper-x402-production.up.railway.app",
     price: "$0.005", category: "social",
     parameters: { username: { type: "string", description: "Twitter username" }, query: { type: "string", description: "Search query" }, type: { type: "string", description: "Request type", enum: ["profile", "search", "timeline"] } },
     required: ["type"],
@@ -507,7 +507,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "dns_lookup",
     description: "DNS records (A, AAAA, MX, TXT, CNAME, NS, SOA, SRV) via Cloudflare DNS-over-HTTPS",
-    url: "https://dns-lookup-production-437a.up.railway.app",
+    url: "https://dns-lookup-x402-production.up.railway.app",
     price: "$0.002", category: "network",
     parameters: { domain: { type: "string", description: "Domain name" }, type: { type: "string", description: "Record type", enum: ["A", "AAAA", "MX", "TXT", "CNAME", "NS", "SOA", "SRV"] } },
     required: ["domain"],
@@ -515,7 +515,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "ip_geolocation",
     description: "Geolocate any IP -- country, city, ISP, ASN, VPN/proxy/Tor detection",
-    url: "https://ip-geolocation-production.up.railway.app",
+    url: "https://ip-geolocation-x402-production.up.railway.app",
     price: "$0.003", category: "network",
     parameters: { ip: { type: "string", description: "IP address" } },
     required: ["ip"],
@@ -523,7 +523,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "ip_geolocation_batch",
     description: "Geolocate up to 20 IP addresses in one call with full location and network data",
-    url: "https://ip-geolocation-production.up.railway.app",
+    url: "https://ip-geolocation-x402-production.up.railway.app",
     price: "$0.01", category: "network",
     parameters: { ips: { type: "array", description: "Array of IPs (max 20)" } },
     required: ["ips"],
@@ -535,14 +535,14 @@ export const CATALOG: ApiTool[] = [
   {
     name: "ai_summarizer",
     description: "Summarize text or URLs into key bullet points. Powered by Claude Haiku",
-    url: "https://ai-summarizer-production-b148.up.railway.app",
+    url: "https://ai-summarizer-x402-production.up.railway.app",
     price: "$0.01", category: "nlp",
     parameters: { text: { type: "string", description: "Text to summarize" }, url: { type: "string", description: "URL to summarize" } },
   },
   {
     name: "sentiment_analyzer",
     description: "Analyze text sentiment, emotions, confidence scores",
-    url: "https://sentiment-analyzer-production-b1f6.up.railway.app",
+    url: "https://sentiment-analyzer-x402-production.up.railway.app",
     price: "$0.005", category: "nlp",
     parameters: { text: { type: "string", description: "Text to analyze" } },
     required: ["text"],
@@ -550,7 +550,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "text_translator",
     description: "Translate text between 50+ languages with auto-detection",
-    url: "https://text-translator-production.up.railway.app",
+    url: "https://text-translator-x402-production.up.railway.app",
     price: "$0.005", category: "nlp",
     parameters: { text: { type: "string", description: "Text to translate" }, targetLang: { type: "string", description: "Target language code" } },
     required: ["text", "targetLang"],
@@ -558,7 +558,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "text_classifier",
     description: "Classify text into topic categories with confidence scores, readability, content type detection",
-    url: "https://text-classifier-production.up.railway.app",
+    url: "https://text-classifier-x402-production.up.railway.app",
     price: "$0.005", category: "nlp",
     parameters: { text: { type: "string", description: "Text to classify (min 50 chars)" }, categories: { type: "array", description: "Custom categories (optional)" } },
     required: ["text"],
@@ -566,7 +566,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "language_detector",
     description: "Detect language from text -- 30+ languages, script detection, confidence scores",
-    url: "https://language-detector-production-9ef8.up.railway.app",
+    url: "https://language-detector-x402-production.up.railway.app",
     price: "$0.002", category: "nlp",
     parameters: { text: { type: "string", description: "Text to detect (min 10 chars)" } },
     required: ["text"],
@@ -590,7 +590,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "image_resize",
     description: "Resize images from URL -- custom dimensions, format conversion (PNG/JPEG/WebP), aspect ratio preserved",
-    url: "https://image-resize-production-962d.up.railway.app",
+    url: "https://image-resize-x402-production.up.railway.app",
     price: "$0.003", category: "media",
     parameters: { url: { type: "string", description: "URL of image" }, width: { type: "number", description: "Target width px" }, height: { type: "number", description: "Target height px" }, format: { type: "string", description: "Output format", enum: ["png", "jpeg", "webp"] } },
     required: ["url"],
@@ -598,7 +598,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "ocr_extract",
     description: "Extract text from images via OCR -- URL or base64, confidence score, language detection",
-    url: "https://ocr-extract-production.up.railway.app",
+    url: "https://ocr-extract-x402-production.up.railway.app",
     price: "$0.005", category: "media",
     parameters: { image_url: { type: "string", description: "Image URL" }, image_base64: { type: "string", description: "Base64-encoded image (alt)" }, language: { type: "string", description: "Language hint: eng, fra, deu, spa" } },
   },
@@ -617,7 +617,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "diff_checker",
     description: "Compare two texts line-by-line with additions, deletions, similarity score",
-    url: "https://diff-checker-production.up.railway.app",
+    url: "https://diff-checker-x402-production.up.railway.app",
     price: "$0.002", category: "text",
     parameters: { text1: { type: "string", description: "Original text" }, text2: { type: "string", description: "Modified text" } },
     required: ["text1", "text2"],
@@ -625,7 +625,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "word_counter",
     description: "Text metrics: words, characters, sentences, paragraphs, reading time",
-    url: "https://word-counter-production.up.railway.app",
+    url: "https://word-counter-x402-production.up.railway.app",
     price: "$0.001", category: "text",
     parameters: { text: { type: "string", description: "Text to analyze" } },
     required: ["text"],
@@ -633,7 +633,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "lorem_ipsum",
     description: "Generate Lorem Ipsum placeholder text -- paragraphs, sentences, or words",
-    url: "https://lorem-ipsum-production-efa3.up.railway.app",
+    url: "https://lorem-ipsum-x402-production.up.railway.app",
     price: "$0.001", category: "text",
     parameters: { count: { type: "number", description: "Number of units (default: 3)" }, type: { type: "string", description: "Unit type", enum: ["paragraphs", "sentences", "words"] } },
     required: ["count", "type"],
@@ -641,7 +641,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "slug_generator",
     description: "Convert text to clean URL-friendly slugs with transliteration",
-    url: "https://slug-generator-production.up.railway.app",
+    url: "https://slug-generator-x402-production.up.railway.app",
     price: "$0.001", category: "text",
     parameters: { text: { type: "string", description: "Text to slugify" }, separator: { type: "string", description: "Separator (default: -)" } },
     required: ["text"],
@@ -649,7 +649,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "regex_tester",
     description: "Test regex patterns -- matches, capture groups, positions, pattern explanations",
-    url: "https://regex-generator-production-0566.up.railway.app",
+    url: "https://regex-generator-x402-production.up.railway.app",
     price: "$0.001", category: "text",
     parameters: { pattern: { type: "string", description: "Regex pattern (no delimiters)" }, flags: { type: "string", description: "Flags: g, i, m, s, u" }, testStrings: { type: "array", description: "Strings to test against" } },
     required: ["pattern", "testStrings"],
@@ -657,7 +657,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "html_to_markdown",
     description: "Convert HTML to clean Markdown -- preserves headings, links, lists, images",
-    url: "https://html-to-markdown-production-3fc7.up.railway.app",
+    url: "https://html-to-markdown-x402-production.up.railway.app",
     price: "$0.001", category: "text",
     parameters: { html: { type: "string", description: "HTML content" } },
     required: ["html"],
@@ -673,7 +673,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "markdown_renderer",
     description: "Render Markdown to styled HTML with CSS themes -- light, dark, GitHub",
-    url: "https://markdown-renderer-production.up.railway.app",
+    url: "https://markdown-renderer-x402-production.up.railway.app",
     price: "$0.002", category: "text",
     parameters: { markdown: { type: "string", description: "Markdown text" }, theme: { type: "string", description: "CSS theme", enum: ["light", "dark", "github"] } },
     required: ["markdown"],
@@ -685,7 +685,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "fact_checker",
     description: "Verify factual claims with web evidence, source URLs, and confidence assessment",
-    url: "https://fact-checker-production-097f.up.railway.app",
+    url: "https://fact-checker-x402-production.up.railway.app",
     price: "$0.005", category: "research",
     parameters: { claim: { type: "string", description: "Factual claim to verify" }, max_sources: { type: "number", description: "Max sources (default: 5, max: 10)" } },
     required: ["claim"],
@@ -693,7 +693,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "research_report",
     description: "Multi-source research reports on any topic -- structured markdown, findings, sources",
-    url: "https://research-report-production.up.railway.app",
+    url: "https://research-report-x402-production.up.railway.app",
     price: "$0.02", category: "research",
     parameters: { topic: { type: "string", description: "Research topic" }, depth: { type: "string", description: "Depth", enum: ["quick", "standard", "deep"] } },
     required: ["topic"],
@@ -705,7 +705,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "gdpr_scanner",
     description: "Scan website GDPR compliance: consent, privacy, trackers. Score 0-100",
-    url: "https://gdpr-scanner-production.up.railway.app",
+    url: "https://gdpr-scanner-x402-production.up.railway.app",
     price: "$0.02", category: "compliance",
     parameters: { url: { type: "string", description: "URL to scan" } },
     required: ["url"],
@@ -713,7 +713,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "pii_detector",
     description: "Detect PII in text -- emails, phones, SSNs, credit cards, IPs with risk scoring and redaction",
-    url: "https://pii-detector-production.up.railway.app",
+    url: "https://pii-detector-x402-production.up.railway.app",
     price: "$0.005", category: "compliance",
     parameters: { text: { type: "string", description: "Text to scan for PII" } },
     required: ["text"],
@@ -741,7 +741,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "sms_validator",
     description: "Validate if a phone number can receive SMS with carrier type and E.164 format",
-    url: "https://sms-validator-production-d5a0.up.railway.app",
+    url: "https://sms-validator-x402-production.up.railway.app",
     price: "$0.002", category: "validation",
     parameters: { phone: { type: "string", description: "Phone number with country code" }, countryCode: { type: "string", description: "ISO country code hint (US, FR)" } },
     required: ["phone"],
@@ -749,7 +749,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "address_validator",
     description: "Parse, validate, normalize postal addresses with country detection",
-    url: "https://address-validator-production-33e1.up.railway.app",
+    url: "https://address-validator-x402-production.up.railway.app",
     price: "$0.003", category: "validation",
     parameters: { address: { type: "string", description: "Full address string" } },
     required: ["address"],
@@ -757,7 +757,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "json_validator",
     description: "Validate JSON syntax and check against JSON Schema with structure stats",
-    url: "https://json-validator-production.up.railway.app",
+    url: "https://json-validator-x402-production.up.railway.app",
     price: "$0.001", category: "validation",
     parameters: { json: { type: "string", description: "JSON string to validate" }, schema: { type: "object", description: "JSON Schema to validate against (optional)" } },
     required: ["json"],
@@ -769,7 +769,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "code_sandbox",
     description: "Execute Python, JavaScript, or SQL in a sandbox with stdout, execution time, errors",
-    url: "https://code-sandbox-production-9b5e.up.railway.app",
+    url: "https://code-sandbox-x402-production.up.railway.app",
     price: "$0.01", category: "developer",
     parameters: { code: { type: "string", description: "Code to execute" }, language: { type: "string", description: "Language", enum: ["python", "javascript", "sql"] }, timeout: { type: "number", description: "Timeout ms (default: 5000, max: 10000)" } },
     required: ["code", "language"],
@@ -781,7 +781,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "qr_code",
     description: "Generate QR codes from text or URLs -- base64 PNG output, configurable size",
-    url: "https://qr-code-production-cf4b.up.railway.app",
+    url: "https://qr-code-x402-production.up.railway.app",
     price: "$0.001", category: "generator",
     parameters: { data: { type: "string", description: "Text or URL to encode" }, size: { type: "number", description: "Size in modules (default: 21)" } },
     required: ["data"],
@@ -797,7 +797,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "hash_generator",
     description: "Generate MD5, SHA1, SHA256, SHA512, and bcrypt hashes",
-    url: "https://hash-generator-production.up.railway.app",
+    url: "https://hash-generator-x402-production.up.railway.app",
     price: "$0.001", category: "generator",
     parameters: { text: { type: "string", description: "Text to hash" }, algorithm: { type: "string", description: "Algorithm", enum: ["md5", "sha1", "sha256", "sha512", "bcrypt"] } },
     required: ["text"],
@@ -805,14 +805,14 @@ export const CATALOG: ApiTool[] = [
   {
     name: "uuid_generator",
     description: "Generate UUID v4, v7, ULID, or nanoid identifiers -- batch up to 100",
-    url: "https://uuid-generator-production.up.railway.app",
+    url: "https://uuid-generator-x402-production.up.railway.app",
     price: "$0.001", category: "generator",
     parameters: { format: { type: "string", description: "Format", enum: ["uuidv4", "uuidv7", "ulid", "nanoid"] }, count: { type: "number", description: "Count (default: 1, max: 100)" } },
   },
   {
     name: "color_palette",
     description: "Generate harmonious color palettes from hex -- 5 schemes, hex/RGB/HSL/CSS vars",
-    url: "https://color-palette-production-8c81.up.railway.app",
+    url: "https://color-palette-x402-production.up.railway.app",
     price: "$0.001", category: "generator",
     parameters: { color: { type: "string", description: "Base hex color (#FF5733)" }, scheme: { type: "string", description: "Scheme", enum: ["complementary", "analogous", "triadic", "split-complementary", "tetradic"] }, count: { type: "number", description: "Colors (default: 5, max: 10)" } },
     required: ["color"],
@@ -844,7 +844,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "csv_to_json",
     description: "Parse CSV to JSON array -- auto-detect delimiter, header row support",
-    url: "https://csv-to-json-production-0ca3.up.railway.app",
+    url: "https://csv-to-json-x402-production.up.railway.app",
     price: "$0.001", category: "utility",
     parameters: { csv: { type: "string", description: "CSV content" }, delimiter: { type: "string", description: "Delimiter (auto-detect)" }, hasHeaders: { type: "boolean", description: "First row is headers (default: true)" } },
     required: ["csv"],
@@ -852,7 +852,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "cron_parser",
     description: "Parse, validate, explain cron expressions with next N run times in any timezone",
-    url: "https://cron-parser-production-128b.up.railway.app",
+    url: "https://cron-parser-x402-production.up.railway.app",
     price: "$0.001", category: "utility",
     parameters: { expression: { type: "string", description: "Cron expression" }, timezone: { type: "string", description: "IANA timezone (default: UTC)" }, count: { type: "number", description: "Next runs (default: 5, max: 20)" } },
     required: ["expression"],
@@ -860,7 +860,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "crontab_generator",
     description: "Natural language to cron -- 'every Monday at 9am' to valid cron expression",
-    url: "https://crontab-generator-production.up.railway.app",
+    url: "https://crontab-generator-x402-production.up.railway.app",
     price: "$0.001", category: "utility",
     parameters: { description: { type: "string", description: "Natural language schedule" } },
     required: ["description"],
@@ -876,7 +876,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "unit_converter",
     description: "Convert units -- length, weight, temperature, volume, speed, data storage",
-    url: "https://unit-converter-production-0b91.up.railway.app",
+    url: "https://unit-converter-x402-production.up.railway.app",
     price: "$0.001", category: "utility",
     parameters: { value: { type: "number", description: "Numeric value" }, from: { type: "string", description: "Source unit (km, lb, celsius)" }, to: { type: "string", description: "Target unit (mi, kg, fahrenheit)" } },
     required: ["value", "from", "to"],
@@ -884,7 +884,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "url_shortener",
     description: "Shorten URLs -- hash-based, custom alias support",
-    url: "https://url-shortener-production-5384.up.railway.app",
+    url: "https://url-shortener-x402-production.up.railway.app",
     price: "$0.001", category: "utility",
     parameters: { url: { type: "string", description: "URL to shorten" }, custom_alias: { type: "string", description: "Custom alias (3-20 chars)" } },
     required: ["url"],
@@ -892,7 +892,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "user_agent_parser",
     description: "Parse user agent strings -- browser, OS, device type, engine, bot detection",
-    url: "https://user-agent-parser-production.up.railway.app",
+    url: "https://user-agent-parser-x402-production.up.railway.app",
     price: "$0.001", category: "utility",
     parameters: { userAgent: { type: "string", description: "User agent string" } },
     required: ["userAgent"],
@@ -911,7 +911,7 @@ export const CATALOG: ApiTool[] = [
   {
     name: "vector_search",
     description: "In-memory vector store with TF-IDF and cosine similarity for document retrieval",
-    url: "https://vector-search-production-bc61.up.railway.app",
+    url: "https://vector-search-x402-production.up.railway.app",
     price: "$0.005", category: "data",
     parameters: { documents: { type: "array", description: "Text documents to index (optional)" }, query: { type: "string", description: "Search query" }, topK: { type: "number", description: "Top results (default: 3, max: 10)" }, namespace: { type: "string", description: "Namespace to isolate doc sets" } },
     required: ["query"],

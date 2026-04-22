@@ -5,7 +5,7 @@ export const CATALOG = [
     {
         name: "hyperliquid_data",
         description: "Hyperliquid perp markets: prices, open interest, 24h volume, orderbook depth for 229 markets",
-        url: "https://hyperliquid-data-production.up.railway.app",
+        url: "https://hyperliquid-data-x402-production.up.railway.app",
         price: "$0.001", category: "hyperliquid",
         parameters: { ticker: { type: "string", description: "Market symbol (BTC, ETH, SOL)" } },
         required: ["ticker"],
@@ -13,7 +13,7 @@ export const CATALOG = [
     {
         name: "hyperliquid_whales",
         description: "Track whale positions on Hyperliquid DEX. Top traders, position sizes, PnL, entry prices",
-        url: "https://hyperliquid-whales-production.up.railway.app",
+        url: "https://hyperliquid-whales-x402-production.up.railway.app",
         price: "$0.003", category: "hyperliquid",
         parameters: { ticker: { type: "string", description: "Perp symbol" }, minSize: { type: "number", description: "Min position USD" } },
         required: ["ticker"],
@@ -28,14 +28,14 @@ export const CATALOG = [
     {
         name: "hl_funding",
         description: "Real-time and historical funding rates for 229 Hyperliquid perp markets. Arb scanner",
-        url: "https://hl-funding-production.up.railway.app",
+        url: "https://hl-funding-x402-production.up.railway.app",
         price: "$0.002", category: "hyperliquid",
         parameters: { ticker: { type: "string", description: "Market symbol" }, period: { type: "string", description: "Funding period", enum: ["current", "1h", "8h", "24h"] } },
     },
     {
         name: "hl_portfolio",
         description: "Hyperliquid account analysis: positions, PnL, fills, open orders, funding payments",
-        url: "https://hl-portfolio-production.up.railway.app",
+        url: "https://hl-portfolio-x402-production.up.railway.app",
         price: "$0.003", category: "hyperliquid",
         parameters: { walletAddress: { type: "string", description: "Wallet address (0x...)" } },
         required: ["walletAddress"],
@@ -43,7 +43,7 @@ export const CATALOG = [
     {
         name: "hl_spot",
         description: "Hyperliquid spot markets: 454 tokens, prices, volume, balances",
-        url: "https://hl-spot-production.up.railway.app",
+        url: "https://hl-spot-x402-production.up.railway.app",
         price: "$0.002", category: "hyperliquid",
         parameters: { token: { type: "string", description: "Token symbol" }, walletAddress: { type: "string", description: "Check balances" } },
     },
@@ -53,14 +53,14 @@ export const CATALOG = [
     {
         name: "prediction_markets",
         description: "Active prediction market events from Polymarket + Kalshi: probabilities, volume, trending",
-        url: "https://prediction-markets-production-3e07.up.railway.app",
+        url: "https://prediction-markets-x402-production.up.railway.app",
         price: "$0.005", category: "prediction",
         parameters: { query: { type: "string", description: "Search query" }, platform: { type: "string", description: "Platform filter", enum: ["polymarket", "kalshi", "all"] } },
     },
     {
         name: "event_resolver",
         description: "Settlement oracle for prediction markets: resolve outcomes, verify claims, check thresholds",
-        url: "https://event-resolver-production.up.railway.app",
+        url: "https://event-resolver-x402-production.up.railway.app",
         price: "$0.005", category: "prediction",
         parameters: { question: { type: "string", description: "Event question to verify" }, eventId: { type: "string", description: "Event ID" } },
         required: ["question"],
@@ -102,7 +102,7 @@ export const CATALOG = [
     {
         name: "token_price",
         description: "Real-time crypto token prices via CoinGecko",
-        url: "https://token-price-production-f72e.up.railway.app",
+        url: "https://token-price-x402-production.up.railway.app",
         price: "$0.001", category: "crypto",
         parameters: { token: { type: "string", description: "Token symbol or CoinGecko ID" } },
         required: ["token"],
@@ -117,7 +117,7 @@ export const CATALOG = [
     {
         name: "whale_alert",
         description: "Track large crypto transactions and whale movements",
-        url: "https://whale-alert-production-3f6f.up.railway.app",
+        url: "https://whale-alert-x402-production.up.railway.app",
         price: "$0.003", category: "crypto",
         parameters: { chain: { type: "string", description: "Chain" }, minValue: { type: "number", description: "Min USD value" } },
     },
@@ -131,7 +131,7 @@ export const CATALOG = [
     {
         name: "funding_arb",
         description: "Funding rate arbitrage opportunities across exchanges",
-        url: "https://funding-arb-production-1034.up.railway.app",
+        url: "https://funding-arb-x402-production.up.railway.app",
         price: "$0.005", category: "crypto",
         parameters: { minSpread: { type: "number", description: "Min spread %" } },
     },
@@ -146,7 +146,7 @@ export const CATALOG = [
     {
         name: "ens_resolver",
         description: "Resolve ENS names to addresses and reverse lookup",
-        url: "https://ens-resolver-production-f3eb.up.railway.app",
+        url: "https://ens-resolver-x402-production.up.railway.app",
         price: "$0.002", category: "crypto",
         parameters: { name: { type: "string", description: "ENS name or address" } },
         required: ["name"],
@@ -186,7 +186,7 @@ export const CATALOG = [
     {
         name: "currency_converter",
         description: "Real-time fiat (ECB) and crypto (CoinGecko) conversion",
-        url: "https://currency-converter-production-b190.up.railway.app",
+        url: "https://currency-converter-x402-production.up.railway.app",
         price: "$0.001", category: "crypto",
         parameters: { from: { type: "string", description: "Source currency" }, to: { type: "string", description: "Target currency" }, amount: { type: "number", description: "Amount" } },
         required: ["from", "to", "amount"],
@@ -249,14 +249,14 @@ export const CATALOG = [
     {
         name: "solana_launches",
         description: "New token launches on Solana: pump.fun, Raydium",
-        url: "https://solana-launches-production.up.railway.app",
+        url: "https://solana-launches-x402-production.up.railway.app",
         price: "$0.003", category: "solana",
         parameters: { source: { type: "string", description: "Launch source", enum: ["pumpfun", "raydium", "all"] } },
     },
     {
         name: "jupiter_quotes",
         description: "Jupiter aggregator swap quotes on Solana",
-        url: "https://jupiter-quotes-production.up.railway.app",
+        url: "https://jupiter-quotes-x402-production.up.railway.app",
         price: "$0.002", category: "solana",
         parameters: { inputMint: { type: "string", description: "Input token mint" }, outputMint: { type: "string", description: "Output token mint" }, amount: { type: "number", description: "Amount in lamports" } },
         required: ["inputMint", "outputMint", "amount"],
@@ -282,7 +282,7 @@ export const CATALOG = [
     {
         name: "trust_score",
         description: "Unified trust scoring for domains, wallets, APIs. SSL/DNS/WHOIS/headers. Score 0-100 with risk flags",
-        url: "https://trust-score-production-ff18.up.railway.app",
+        url: "https://trust-score-x402-production.up.railway.app",
         price: "$0.01", category: "security",
         parameters: { target: { type: "string", description: "Domain, wallet, or URL to score" }, type: { type: "string", description: "Target type", enum: ["domain", "wallet", "api"] } },
         required: ["target"],
@@ -469,7 +469,7 @@ export const CATALOG = [
     {
         name: "twitter_scraper",
         description: "Scrape Twitter/X profiles, search tweets, user timelines. No API key needed",
-        url: "https://twitter-scraper-production-a1e8.up.railway.app",
+        url: "https://twitter-scraper-x402-production.up.railway.app",
         price: "$0.005", category: "social",
         parameters: { username: { type: "string", description: "Twitter username" }, query: { type: "string", description: "Search query" }, type: { type: "string", description: "Request type", enum: ["profile", "search", "timeline"] } },
         required: ["type"],
@@ -549,7 +549,7 @@ export const CATALOG = [
     {
         name: "stock_price",
         description: "Real-time stock quotes: price, change, volume, market cap",
-        url: "https://stock-price-production-3ec1.up.railway.app",
+        url: "https://stock-price-x402-production.up.railway.app",
         price: "$0.002", category: "finance",
         parameters: { symbol: { type: "string", description: "Stock ticker (AAPL, TSLA)" } },
         required: ["symbol"],
