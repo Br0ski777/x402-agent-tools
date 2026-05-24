@@ -32,12 +32,25 @@ export class X402AgentClient {
     const tool = CATALOG.find((t) => t.name === toolName);
     if (!tool) throw new Error(`Tool "${toolName}" not found. Available: ${CATALOG.map((t) => t.name).join(", ")}`);
 
-    const url = new URL("/api", tool.url);
-    const response = await this.fetchWithPayment(url.toString(), {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(params),
-    });
+    const method = (tool.method ?? "GET").toUpperCase();
+    const url = new URL(tool.path, tool.url);
+
+    let init: RequestInit;
+    if (method === "GET" || method === "HEAD") {
+      for (const [key, value] of Object.entries(params)) {
+        if (value === undefined || value === null) continue;
+        url.searchParams.set(key, Array.isArray(value) ? value.join(",") : String(value));
+      }
+      init = { method };
+    } else {
+      init = {
+        method,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(params),
+      };
+    }
+
+    const response = await this.fetchWithPayment(url.toString(), init);
 
     if (!response.ok) {
       const text = await response.text();

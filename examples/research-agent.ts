@@ -14,7 +14,7 @@ async function research(query: string) {
   console.log(`=== Researching: "${query}" ===\n`);
 
   // 1. Web search for relevant pages
-  const results = await client.call("web_search", { query, limit: 5 });
+  const results = await client.call("web_search", { query, count: 5 });
   console.log("Search Results:", JSON.stringify(results, null, 2));
 
   // 2. Scrape the top result for full content

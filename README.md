@@ -1,6 +1,6 @@
 # x402-agent-tools
 
-**103 production-ready AI agent tools with x402 micropayments.** Pay-per-call USDC on Base. Zero API keys. Zero subscriptions. Just a wallet.
+**100 production-ready AI agent tools with x402 micropayments.** Pay-per-call USDC on Base. Zero API keys. Zero subscriptions. Just a wallet.
 
 The largest collection of x402-compatible tools for autonomous AI agents. Built for LangChain, Vercel AI SDK, CrewAI, AutoGPT, and any agent framework that supports tool calling.
 
@@ -33,7 +33,7 @@ import { createClient } from "x402-agent-tools";
 const client = createClient("0xYourPrivateKey");
 
 // Crypto: whale positions on Hyperliquid
-const whales = await client.call("hyperliquid_whales", { ticker: "BTC" });
+const whales = await client.call("hyperliquid_whales", { coin: "BTC" });
 
 // B2B: enrich a company from domain
 const company = await client.call("company_enrichment", { domain: "stripe.com" });
@@ -107,12 +107,22 @@ await executor.invoke({
 Every tool is also available as a standalone x402 HTTP endpoint. Use `@x402/fetch` directly:
 
 ```typescript
-import { wrapFetchWithPayment } from "@x402/fetch";
+import { wrapFetchWithPaymentFromConfig } from "@x402/fetch";
+import { ExactEvmScheme } from "@x402/evm";
+import { privateKeyToAccount } from "viem/accounts";
 
-const response = await paidFetch("https://trust-score-production-ff18.up.railway.app/api", {
+const account = privateKeyToAccount("0xYourPrivateKey");
+const paidFetch = wrapFetchWithPaymentFromConfig(fetch, {
+  schemes: [{ network: "eip155:8453", client: new ExactEvmScheme(account) }],
+});
+
+// trust_score is POST /api/score. GET tools (e.g. dex_quotes -> /api/quote) take query params.
+const response = await paidFetch("https://trust-score.api.klymax402.com/api/score", {
   method: "POST",
+  headers: { "Content-Type": "application/json" },
   body: JSON.stringify({ target: "example.com" }),
 });
+const result = await response.json();
 ```
 
 ## All 103 Tools
@@ -324,12 +334,12 @@ const response = await paidFetch("https://trust-score-production-ff18.up.railway
 Your Agent                    x402-agent-tools                  API Server
     |                              |                                |
     |-- call("trust_score", {})  ->|                                |
-    |                              |-- POST /api ------------------>|
+    |                              |-- POST /api/score ------------>|
     |                              |<-- 402 Payment Required -------|
     |                              |                                |
     |                              |   [auto-signs USDC payment]    |
     |                              |                                |
-    |                              |-- POST /api + payment header ->|
+    |                              |-- POST /api/score + payment -->|
     |                              |<-- 200 OK + JSON data ---------|
     |<-- structured result --------|                                |
 ```

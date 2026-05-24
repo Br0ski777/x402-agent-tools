@@ -1,0 +1,7 @@
+src/
+examples/
+tsconfig.json
+*.log
+.DS_Store
+
+gen-catalog.ts

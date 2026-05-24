@@ -1,1 +1,4 @@
-node_modules/\ndist/\nbun.lock\n*.tgz
+node_modules/
+dist/
+bun.lock
+*.tgz

@@ -14,7 +14,7 @@ async function scanMarket() {
   console.log("=== Hyperliquid Market Scan ===\n");
 
   // 1. Check whale positions on BTC and ETH
-  const btcWhales = await client.call("hyperliquid_whales", { ticker: "BTC" });
+  const btcWhales = await client.call("hyperliquid_whales", { coin: "BTC" });
   console.log("BTC Whale Positions:", JSON.stringify(btcWhales, null, 2));
 
   // 2. Scan funding rates for arbitrage opportunities

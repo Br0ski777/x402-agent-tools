@@ -23,7 +23,8 @@ async function enrichLead(domain: string) {
 
   // 3. Find a contact email
   const contact = await client.call("email_finder", {
-    name: "CEO",
+    firstName: "Jane",
+    lastName: "Doe",
     domain,
   });
   console.log("\nContact Found:", JSON.stringify(contact, null, 2));
