@@ -423,8 +423,21 @@ Check balance: `GET https://klymax402.com/proxy/balance?key=klyx_...`
 
 Full details and pricing: [klymax402.com/packs](https://klymax402.com/packs)
 
+## AI Discovery
+
+klymax402 publishes a machine-readable catalog for AI systems and LLM crawlers:
+
+- **llms.txt**: [klymax402.com/llms.txt](https://klymax402.com/llms.txt) — full API catalog in llms.txt format (100 APIs, pricing, MCP install snippets, x402 payment reference)
+- **MCP endpoint**: `https://app.ampersend.ai/api/hosted/klymax402/mighty-host/skill` — hosted MCP, all 100 APIs, no self-hosting
+- **Live stats**: [klymax402.com/stats](https://klymax402.com/stats/) — 99.9% uptime, P50 57ms, P95 104ms, 766 txs on-chain
+
+Compatible with Claude, Claude Code, Cursor, Codex, and ElizaOS (plugin: `eliza-plugin-klymax402`).
+
 ## Links
 
+- [klymax402.com](https://klymax402.com) — marketplace homepage
+- [llms.txt](https://klymax402.com/llms.txt) — AI-readable catalog
+- [Live stats](https://klymax402.com/stats/) — real-time dashboard
 - [GitHub](https://github.com/Br0ski777/x402-agent-tools)
 - [x402 Protocol](https://www.x402.org/)
 - [x402scan Analytics](https://www.x402scan.com/)
