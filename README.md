@@ -187,7 +187,7 @@ const result = await response.json();
 | `solana_fees` | $0.001 | Priority fee estimates at 6 levels |
 | `solana_pools` | $0.003 | DEX pool liquidity: Raydium, Orca, Meteora |
 
-### Trust & Security — 8 tools
+### Trust & Security — 9 tools
 | Tool | Price | What it returns |
 |------|-------|-----------------|
 | `trust_score` | $0.01 | Unified trust scoring 0-100: domains, wallets, APIs |
@@ -196,6 +196,7 @@ const result = await response.json();
 | `ssl_checker` | $0.002 | SSL/TLS cert: validity, expiry, chain, grade |
 | `http_headers` | $0.001 | HTTP security headers: HSTS, CSP, server detection |
 | `port_scanner` | $0.003 | TCP port scan: open/closed, response time |
+| `tech_risk` | $0.05 | Tech-stack fingerprint -> CVE + EPSS + CISA KEV risk correlation |
 | `password_strength` | $0.001 | Password score 0-100, entropy, crack time |
 | `jwt_decoder` | $0.001 | JWT decode: header, payload, claims, expiry |
 
