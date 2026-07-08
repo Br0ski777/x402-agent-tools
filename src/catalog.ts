@@ -1027,6 +1027,16 @@ export const CATALOG: ApiTool[] = [
     parameters: { "documents": { type: "array", description: "Array of text documents to index (optional if already stored in this session)" }, "query": { type: "string", description: "The text query to search for" }, "topK": { type: "number", description: "Number of top results to return (default: 3, max: 10)" }, "namespace": { type: "string", description: "Namespace to isolate document sets (default: 'default')" } },
     required: ["query"],
   },
+  {
+    name: "enrich_tech_risk",
+    description: "Security enrichment: analyze a tech stack URL and return CVE/EPSS/CISA-KEV findings, $0.05 USDC per query",
+    url: "https://x402-data-api.sigrunner.workers.dev",
+    method: "POST",
+    path: "/enrich/tech-risk",
+    price: "$0.05", category: "security",
+    parameters: { "url": { type: "string", description: "Tech stack URL to analyze (e.g. https://example.com or github.com/org/repo)" } },
+    required: ["url"],
+  },
 ];
 
 export const CATEGORIES = [...new Set(CATALOG.map((t) => t.category))];

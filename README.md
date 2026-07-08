@@ -10,7 +10,7 @@ The largest collection of x402-compatible tools for autonomous AI agents. Built 
 
 | Feature | x402-agent-tools | StableEnrich | httpay | BlockRun |
 |---------|-----------------|--------------|--------|----------|
-| Tools available | **103** | ~12 | ~8 | ~15 |
+| Tools available | **104** | ~12 | ~8 | ~15 |
 | Avg price/call | **$0.003** | $0.01-0.05 | $0.01-0.03 | $0.01-0.05 |
 | API keys needed | **None** | Yes | Yes | Yes |
 | Subscription | **None** | Monthly | Monthly | Monthly |
