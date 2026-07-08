@@ -425,7 +425,7 @@ export const CATALOG: ApiTool[] = [
     name: "tech_risk",
     description: "Tech-stack fingerprint -> CVE mapping with EPSS exploit-probability + CISA KEV cross-reference",
     url: "https://x402-data-api.sigrunner.workers.dev",
-    method: "POST",
+    method: "GET",
     path: "/enrich/tech-risk",
     price: "$0.05", category: "security",
     parameters: { "domain": { type: "string", description: "Domain to analyze (auto-detects tech stack)" }, "techstack": { type: "array", description: "Override: manually specify tech stack keywords instead of auto-detection" } },
