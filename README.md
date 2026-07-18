@@ -132,7 +132,7 @@ const result = await response.json();
 
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `hyperliquid_data` | $0.001 | Perp markets: prices, open interest, 24h volume, orderbook depth for 229 markets |
+| `hyperliquid_data` | $0.003 | Perp markets: prices, open interest, 24h volume, orderbook depth for 229 markets |
 | `hyperliquid_whales` | $0.003 | Whale positions: sizes, PnL, entry prices, leverage |
 | `hl_vaults` | $0.003 | Vault summaries: APR, TVL, PnL, depositor count |
 | `hl_funding` | $0.002 | Funding rates: current, 1h, 8h, 24h with arb scanner |
@@ -149,10 +149,10 @@ const result = await response.json();
 | Tool | Price | What it returns |
 |------|-------|-----------------|
 | `wallet_portfolio` | $0.003 | Multi-chain wallet balances and token holdings |
-| `gas_oracle` | $0.001 | Gas prices: fast/standard/slow for any EVM chain |
+| `gas_oracle` | $0.003 | Gas prices: fast/standard/slow for any EVM chain |
 | `gas_estimator` | $0.002 | Multi-chain gas comparison in one call |
 | `dex_quotes` | $0.005 | Best swap quotes across DEXs with price impact |
-| `token_price` | $0.001 | Real-time crypto prices via CoinGecko |
+| `token_price` | $0.003 | Real-time crypto prices via CoinGecko |
 | `defi_yields` | $0.002 | Best DeFi yields: APY, TVL, risk scores |
 | `whale_alert` | $0.003 | Large crypto transactions and whale movements |
 | `crypto_news` | $0.002 | Crypto news with sentiment scores |
@@ -163,7 +163,7 @@ const result = await response.json();
 | `token_ohlcv` | $0.002 | Historical OHLCV candles |
 | `airdrop_checker` | $0.005 | Check wallet eligibility for active airdrops |
 | `bridge_routes` | $0.003 | Best cross-chain bridge routes via LI.FI (60+ chains) |
-| `currency_converter` | $0.001 | Fiat (ECB) and crypto (CoinGecko) conversion |
+| `currency_converter` | $0.003 | Fiat (ECB) and crypto (CoinGecko) conversion |
 
 ### DeFi Advanced — 3 tools
 | Tool | Price | What it returns |
@@ -184,7 +184,7 @@ const result = await response.json();
 |------|-------|-----------------|
 | `solana_launches` | $0.003 | New token launches: pump.fun, Raydium |
 | `jupiter_quotes` | $0.002 | Jupiter aggregator swap quotes |
-| `solana_fees` | $0.001 | Priority fee estimates at 6 levels |
+| `solana_fees` | $0.003 | Priority fee estimates at 6 levels |
 | `solana_pools` | $0.003 | DEX pool liquidity: Raydium, Orca, Meteora |
 
 ### Trust & Security — 8 tools
@@ -194,10 +194,10 @@ const result = await response.json();
 | `token_safety` | $0.003 | Rug pull detection: honeypot, liquidity, ownership |
 | `domain_intelligence` | $0.005 | Full domain intel: DNS, WHOIS, SSL, registrar |
 | `ssl_checker` | $0.002 | SSL/TLS cert: validity, expiry, chain, grade |
-| `http_headers` | $0.001 | HTTP security headers: HSTS, CSP, server detection |
+| `http_headers` | $0.003 | HTTP security headers: HSTS, CSP, server detection |
 | `port_scanner` | $0.003 | TCP port scan: open/closed, response time |
-| `password_strength` | $0.001 | Password score 0-100, entropy, crack time |
-| `jwt_decoder` | $0.001 | JWT decode: header, payload, claims, expiry |
+| `password_strength` | $0.003 | Password score 0-100, entropy, crack time |
+| `jwt_decoder` | $0.003 | JWT decode: header, payload, claims, expiry |
 
 ### B2B Enrichment — 6 tools
 | Tool | Price | What it returns |
@@ -262,12 +262,12 @@ const result = await response.json();
 | Tool | Price | What it returns |
 |------|-------|-----------------|
 | `diff_checker` | $0.002 | Line-by-line text diff with similarity score |
-| `word_counter` | $0.001 | Words, chars, sentences, paragraphs, reading time |
-| `lorem_ipsum` | $0.001 | Placeholder text: paragraphs, sentences, words |
-| `slug_generator` | $0.001 | URL-friendly slugs with transliteration |
-| `regex_tester` | $0.001 | Regex testing: matches, groups, explanations |
-| `html_to_markdown` | $0.001 | HTML to clean Markdown conversion |
-| `markdown_to_html` | $0.001 | Markdown to HTML conversion |
+| `word_counter` | $0.003 | Words, chars, sentences, paragraphs, reading time |
+| `lorem_ipsum` | $0.003 | Placeholder text: paragraphs, sentences, words |
+| `slug_generator` | $0.003 | URL-friendly slugs with transliteration |
+| `regex_tester` | $0.003 | Regex testing: matches, groups, explanations |
+| `html_to_markdown` | $0.003 | HTML to clean Markdown conversion |
+| `markdown_to_html` | $0.003 | Markdown to HTML conversion |
 | `markdown_renderer` | $0.002 | Markdown to styled HTML (light/dark/GitHub themes) |
 
 ### Research — 2 tools
@@ -289,7 +289,7 @@ const result = await response.json();
 | `phone_validation_batch` | $0.025 | Batch validate up to 50 phones |
 | `sms_validator` | $0.002 | SMS-capable validation with carrier type |
 | `address_validator` | $0.003 | Postal address parsing and normalization |
-| `json_validator` | $0.001 | JSON syntax + schema validation |
+| `json_validator` | $0.003 | JSON syntax + schema validation |
 
 ### Developer — 1 tool
 | Tool | Price | What it returns |
@@ -299,11 +299,11 @@ const result = await response.json();
 ### Generators — 5 tools
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `qr_code` | $0.001 | QR codes as base64 PNG |
-| `barcode_generator` | $0.001 | Barcodes: EAN-13, UPC-A, Code128, Code39 |
-| `hash_generator` | $0.001 | MD5, SHA1, SHA256, SHA512, bcrypt hashes |
-| `uuid_generator` | $0.001 | UUID v4, v7, ULID, nanoid (batch 100) |
-| `color_palette` | $0.001 | Harmonious color palettes from hex |
+| `qr_code` | $0.003 | QR codes as base64 PNG |
+| `barcode_generator` | $0.003 | Barcodes: EAN-13, UPC-A, Code128, Code39 |
+| `hash_generator` | $0.003 | MD5, SHA1, SHA256, SHA512, bcrypt hashes |
+| `uuid_generator` | $0.003 | UUID v4, v7, ULID, nanoid (batch 100) |
+| `color_palette` | $0.003 | Harmonious color palettes from hex |
 
 ### Documents — 1 tool
 | Tool | Price | What it returns |
@@ -313,19 +313,19 @@ const result = await response.json();
 ### Utility — 8 tools
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `base64_codec` | $0.001 | Base64 encode/decode (standard + URL-safe) |
-| `csv_to_json` | $0.001 | CSV to JSON with auto-detect delimiter |
-| `cron_parser` | $0.001 | Parse cron expressions with next run times |
-| `crontab_generator` | $0.001 | Natural language to cron expression |
-| `timezone_converter` | $0.001 | Datetime conversion between IANA timezones |
-| `unit_converter` | $0.001 | Length, weight, temp, volume, speed conversion |
-| `url_shortener` | $0.001 | URL shortening with custom aliases |
-| `user_agent_parser` | $0.001 | Parse user agent: browser, OS, device, bot |
+| `base64_codec` | $0.003 | Base64 encode/decode (standard + URL-safe) |
+| `csv_to_json` | $0.003 | CSV to JSON with auto-detect delimiter |
+| `cron_parser` | $0.003 | Parse cron expressions with next run times |
+| `crontab_generator` | $0.003 | Natural language to cron expression |
+| `timezone_converter` | $0.003 | Datetime conversion between IANA timezones |
+| `unit_converter` | $0.003 | Length, weight, temp, volume, speed conversion |
+| `url_shortener` | $0.003 | URL shortening with custom aliases |
+| `user_agent_parser` | $0.003 | Parse user agent: browser, OS, device, bot |
 
 ### Data — 2 tools
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `weather` | $0.001 | Current weather + 7-day forecast |
+| `weather` | $0.003 | Current weather + 7-day forecast |
 | `vector_search` | $0.005 | TF-IDF cosine similarity document search |
 
 ## How x402 Payment Works

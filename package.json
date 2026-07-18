@@ -1,6 +1,6 @@
 {
   "name": "x402-agent-tools",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "103 production-ready AI agent tools with x402 micropayments. Hyperliquid DEX suite, prediction markets, DeFi liquidations, NFT data, trust scoring, B2B enrichment, web scraping, SEO, NLP, Solana, security audits. Pay-per-call USDC on Base L2. Zero API keys. Self-hosted on Hetzner (klymax402.com).",
   "type": "module",
   "main": "dist/index.js",

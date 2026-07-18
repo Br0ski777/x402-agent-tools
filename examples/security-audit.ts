@@ -26,8 +26,8 @@ async function auditDomain(domain: string) {
   console.log("\nDomain Intel:", JSON.stringify(dns, null, 2));
   console.log("\nSecurity Headers:", JSON.stringify(headers, null, 2));
 
-  // Total cost: $0.01 + $0.002 + $0.005 + $0.001 = $0.018
-  console.log("\n--- Audit complete. Cost: ~$0.018 ---");
+  // Total cost: $0.01 + $0.002 + $0.005 + $0.003 = $0.020
+  console.log("\n--- Audit complete. Cost: ~$0.020 ---");
 }
 
 // Audit multiple domains
