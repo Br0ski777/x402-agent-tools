@@ -602,7 +602,7 @@ export const CATALOG: ApiTool[] = [
   },
   {
     name: "ai_summarizer",
-    description: "Summarize text or URLs into key bullet points. Powered by Claude Haiku",
+    description: "Summarize text or URLs into key bullet points -- fast extractive summarization",
     url: "https://ai-summarizer.api.klymax402.com",
     method: "POST",
     path: "/api/summarize",

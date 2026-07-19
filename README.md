@@ -240,7 +240,7 @@ const result = await response.json();
 ### NLP — 5 tools
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `ai_summarizer` | $0.03 | Summarize text/URLs via Claude Haiku |
+| `ai_summarizer` | $0.03 | Summarize text/URLs -- fast extractive summarization |
 | `sentiment_analyzer` | $0.015 | Sentiment, emotions, confidence scores |
 | `text_translator` | $0.005 | Translate 50+ languages with auto-detection |
 | `text_classifier` | $0.005 | Topic classification, readability, content type |
