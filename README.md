@@ -219,7 +219,7 @@ const result = await response.json();
 | Tool | Price | What it returns |
 |------|-------|-----------------|
 | `web_scraper` | $0.005 | URL to clean markdown, headless rendering |
-| `seo_analyzer` | $0.02 | Full SEO audit: meta, headings, schema, score 0-100 |
+| `seo_analyzer` | $0.06 | Full SEO audit: meta, headings, schema, score 0-100 |
 | `screenshot_pdf` | $0.008 | Screenshots (PNG/JPEG/WebP) and PDF capture |
 | `web_search` | $0.003 | Web search: title, URL, snippet, 10 results |
 | `keyword_research` | $0.01 | SEO keywords: Google Suggest, intent, long-tail |
@@ -240,8 +240,8 @@ const result = await response.json();
 ### NLP — 5 tools
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `ai_summarizer` | $0.01 | Summarize text/URLs via Claude Haiku |
-| `sentiment_analyzer` | $0.005 | Sentiment, emotions, confidence scores |
+| `ai_summarizer` | $0.03 | Summarize text/URLs via Claude Haiku |
+| `sentiment_analyzer` | $0.015 | Sentiment, emotions, confidence scores |
 | `text_translator` | $0.005 | Translate 50+ languages with auto-detection |
 | `text_classifier` | $0.005 | Topic classification, readability, content type |
 | `language_detector` | $0.002 | Language detection: 30+ languages, script, confidence |
@@ -274,7 +274,7 @@ const result = await response.json();
 | Tool | Price | What it returns |
 |------|-------|-----------------|
 | `fact_checker` | $0.005 | Verify claims with evidence and sources |
-| `research_report` | $0.02 | Multi-source research reports in markdown |
+| `research_report` | $0.06 | Multi-source research reports in markdown |
 
 ### Compliance — 2 tools
 | Tool | Price | What it returns |
