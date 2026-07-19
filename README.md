@@ -391,38 +391,6 @@ const all = client.listTools();
 - Private key for signing payments (use a dedicated agent wallet, **not** your main wallet)
 
 
-## Prepaid mode
-
-Skip the x402 wallet setup entirely. Buy credits upfront on [klymax402.com/packs](https://klymax402.com/packs) and call any API with a simple key — no x402 signing, no EIP-3009, no USDC balance management.
-
-**Setup (2 steps):**
-
-```bash
-# 1. Register your wallet → get an API key
-curl -X POST https://klymax402.com/proxy/register   -H "Content-Type: application/json"   -d '{"wallet": "0xYourBaseWallet"}'
-# → { "api_key": "klyx_...", "credits_bank": "0x7cfE..." }
-
-# 2. Send exactly $10 / $50 / $200 USDC on Base to the credits_bank address
-#    Credits are detected automatically within 5 minutes
-```
-
-**Call any API via the prepaid proxy:**
-
-```bash
-curl -X POST https://klymax402.com/proxy/stock-price/api/quote   -H "X-Klymax-Key: klyx_your_key_here"   -H "Content-Type: application/json"   -d '{"symbol": "AAPL"}'
-# Response header: X-Klymax-Balance: 10.998
-```
-
-| Pack | Price | Credits | Bonus |
-|------|-------|---------|-------|
-| Starter | $10 USDC | $11.00 | +10% |
-| Pro | $50 USDC | $62.50 | +25% |
-| Scale | $200 USDC | $280.00 | +40% |
-
-Check balance: `GET https://klymax402.com/proxy/balance?key=klyx_...`
-
-Full details and pricing: [klymax402.com/packs](https://klymax402.com/packs)
-
 ## AI Discovery
 
 klymax402 publishes a machine-readable catalog for AI systems and LLM crawlers:
