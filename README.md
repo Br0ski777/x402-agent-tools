@@ -428,7 +428,7 @@ Full details and pricing: [klymax402.com/packs](https://klymax402.com/packs)
 klymax402 publishes a machine-readable catalog for AI systems and LLM crawlers:
 
 - **llms.txt**: [klymax402.com/llms.txt](https://klymax402.com/llms.txt) — full API catalog in llms.txt format (100 APIs, pricing, MCP install snippets, x402 payment reference)
-- **MCP endpoint**: `https://app.ampersend.ai/api/hosted/klymax402/mighty-host/skill` — hosted MCP, all 100 APIs, no self-hosting
+- **MCP endpoint**: `https://klymax402.com/mcp` — self-hosted MCP gateway, all 100 APIs, Streamable HTTP
 - **Live stats**: [klymax402.com/stats](https://klymax402.com/stats/) — 99.9% uptime, P50 57ms, P95 104ms, 766 txs on-chain
 
 Compatible with Claude, Claude Code, Cursor, Codex, and ElizaOS (plugin: `eliza-plugin-klymax402`).
