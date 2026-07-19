@@ -41,8 +41,8 @@ async function enrichLead(domain: string) {
   const trust = await client.call("trust_score", { target: domain });
   console.log("\nTrust Score:", JSON.stringify(trust, null, 2));
 
-  // Total cost: $0.01 + $0.005 + $0.005 + $0.002 + $0.01 = $0.032
-  console.log("\n--- Pipeline complete. Cost: ~$0.032 per lead ---");
+  // Total cost: $0.02 + $0.012 + $0.012 + $0.005 + $0.02 = $0.069
+  console.log("\n--- Pipeline complete. Cost: ~$0.069 per lead ---");
 }
 
 // Enrich a list of target companies

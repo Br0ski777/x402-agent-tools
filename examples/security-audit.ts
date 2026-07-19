@@ -2,7 +2,7 @@
  * Security Audit Agent — Full domain security assessment
  *
  * Trust score + SSL + DNS + Headers + Port scan in one pipeline.
- * Costs ~$0.02 per domain audit.
+ * Costs ~$0.04 per domain audit.
  *
  * Run: npx tsx examples/security-audit.ts
  */
@@ -26,8 +26,8 @@ async function auditDomain(domain: string) {
   console.log("\nDomain Intel:", JSON.stringify(dns, null, 2));
   console.log("\nSecurity Headers:", JSON.stringify(headers, null, 2));
 
-  // Total cost: $0.01 + $0.002 + $0.005 + $0.003 = $0.020
-  console.log("\n--- Audit complete. Cost: ~$0.020 ---");
+  // Total cost: $0.02 + $0.005 + $0.012 + $0.003 = $0.040
+  console.log("\n--- Audit complete. Cost: ~$0.040 ---");
 }
 
 // Audit multiple domains

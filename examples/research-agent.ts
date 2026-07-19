@@ -2,7 +2,7 @@
  * Research Agent — Deep web research pipeline
  *
  * Search → Scrape → Verify → Summarize any topic.
- * Costs ~$0.043 per research cycle.
+ * Costs ~$0.062 per research cycle.
  *
  * Run: npx tsx examples/research-agent.ts
  */
@@ -39,8 +39,8 @@ async function research(query: string) {
   });
   console.log("\nAI Summary:", JSON.stringify(summary, null, 2));
 
-  // Total cost: $0.003 + $0.005 + $0.005 + $0.03 = $0.043
-  console.log("\n--- Research complete. Cost: ~$0.043 ---");
+  // Total cost: $0.008 + $0.012 + $0.012 + $0.03 = $0.062
+  console.log("\n--- Research complete. Cost: ~$0.062 ---");
 }
 
 research("x402 protocol micropayments AI agents 2026").catch(console.error);

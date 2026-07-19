@@ -2,7 +2,7 @@
  * Trading Agent — Hyperliquid whale tracking + funding arb
  *
  * Monitors whale positions, funding rates, and prediction markets
- * to generate trading signals. Costs ~$0.02 per full scan.
+ * to generate trading signals. Costs ~$0.033 per full scan.
  *
  * Run: npx tsx examples/trading-agent.ts
  */
@@ -32,8 +32,8 @@ async function scanMarket() {
   const vaults = await client.call("hl_vaults", {});
   console.log("\nTop Vaults by APR:", JSON.stringify(vaults, null, 2));
 
-  // Total cost: $0.003 + $0.002 + $0.005 + $0.003 = $0.013
-  console.log("\n--- Scan complete. Cost: ~$0.013 ---");
+  // Total cost: $0.008 + $0.005 + $0.012 + $0.008 = $0.033
+  console.log("\n--- Scan complete. Cost: ~$0.033 ---");
 }
 
 scanMarket().catch(console.error);

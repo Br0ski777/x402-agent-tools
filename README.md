@@ -133,108 +133,108 @@ const result = await response.json();
 | Tool | Price | What it returns |
 |------|-------|-----------------|
 | `hyperliquid_data` | $0.003 | Perp markets: prices, open interest, 24h volume, orderbook depth for 229 markets |
-| `hyperliquid_whales` | $0.003 | Whale positions: sizes, PnL, entry prices, leverage |
-| `hl_vaults` | $0.003 | Vault summaries: APR, TVL, PnL, depositor count |
-| `hl_funding` | $0.002 | Funding rates: current, 1h, 8h, 24h with arb scanner |
-| `hl_portfolio` | $0.003 | Account analysis: positions, PnL, fills, open orders, funding |
-| `hl_spot` | $0.002 | 454 spot tokens: prices, volume, wallet balances |
+| `hyperliquid_whales` | $0.008 | Whale positions: sizes, PnL, entry prices, leverage |
+| `hl_vaults` | $0.008 | Vault summaries: APR, TVL, PnL, depositor count |
+| `hl_funding` | $0.005 | Funding rates: current, 1h, 8h, 24h with arb scanner |
+| `hl_portfolio` | $0.008 | Account analysis: positions, PnL, fills, open orders, funding |
+| `hl_spot` | $0.005 | 454 spot tokens: prices, volume, wallet balances |
 
 ### Prediction Markets — 2 tools
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `prediction_markets` | $0.005 | Active events from Polymarket + Kalshi: probabilities, volume, trending |
-| `event_resolver` | $0.005 | Settlement oracle: resolve outcomes, verify claims, check thresholds |
+| `prediction_markets` | $0.012 | Active events from Polymarket + Kalshi: probabilities, volume, trending |
+| `event_resolver` | $0.012 | Settlement oracle: resolve outcomes, verify claims, check thresholds |
 
 ### Crypto & DeFi — 16 tools
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `wallet_portfolio` | $0.003 | Multi-chain wallet balances and token holdings |
+| `wallet_portfolio` | $0.008 | Multi-chain wallet balances and token holdings |
 | `gas_oracle` | $0.003 | Gas prices: fast/standard/slow for any EVM chain |
-| `gas_estimator` | $0.002 | Multi-chain gas comparison in one call |
-| `dex_quotes` | $0.005 | Best swap quotes across DEXs with price impact |
+| `gas_estimator` | $0.005 | Multi-chain gas comparison in one call |
+| `dex_quotes` | $0.012 | Best swap quotes across DEXs with price impact |
 | `token_price` | $0.003 | Real-time crypto prices via CoinGecko |
-| `defi_yields` | $0.002 | Best DeFi yields: APY, TVL, risk scores |
-| `whale_alert` | $0.003 | Large crypto transactions and whale movements |
-| `crypto_news` | $0.002 | Crypto news with sentiment scores |
-| `funding_arb` | $0.005 | Funding rate arbitrage across exchanges |
-| `funding_rates` | $0.002 | Live perp funding: Binance, Bybit, OKX, open interest |
-| `ens_resolver` | $0.002 | ENS name resolution and reverse lookup |
-| `token_holders` | $0.005 | Token holder distribution: whale count, concentration |
-| `token_ohlcv` | $0.002 | Historical OHLCV candles |
-| `airdrop_checker` | $0.005 | Check wallet eligibility for active airdrops |
-| `bridge_routes` | $0.003 | Best cross-chain bridge routes via LI.FI (60+ chains) |
+| `defi_yields` | $0.005 | Best DeFi yields: APY, TVL, risk scores |
+| `whale_alert` | $0.008 | Large crypto transactions and whale movements |
+| `crypto_news` | $0.005 | Crypto news with sentiment scores |
+| `funding_arb` | $0.012 | Funding rate arbitrage across exchanges |
+| `funding_rates` | $0.005 | Live perp funding: Binance, Bybit, OKX, open interest |
+| `ens_resolver` | $0.005 | ENS name resolution and reverse lookup |
+| `token_holders` | $0.012 | Token holder distribution: whale count, concentration |
+| `token_ohlcv` | $0.005 | Historical OHLCV candles |
+| `airdrop_checker` | $0.012 | Check wallet eligibility for active airdrops |
+| `bridge_routes` | $0.008 | Best cross-chain bridge routes via LI.FI (60+ chains) |
 | `currency_converter` | $0.003 | Fiat (ECB) and crypto (CoinGecko) conversion |
 
 ### DeFi Advanced — 3 tools
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `base_defi` | $0.003 | Base chain yields: Aerodrome LP, Moonwell lending |
-| `liquidation_oracle` | $0.003 | Liquidation levels: Aave, Compound, Morpho positions |
-| `orderbook_depth` | $0.005 | Uniswap V3 liquidity depth and slippage estimation |
+| `base_defi` | $0.008 | Base chain yields: Aerodrome LP, Moonwell lending |
+| `liquidation_oracle` | $0.008 | Liquidation levels: Aave, Compound, Morpho positions |
+| `orderbook_depth` | $0.012 | Uniswap V3 liquidity depth and slippage estimation |
 
 ### NFT — 3 tools
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `nft_collection` | $0.005 | Collection floor price, volume, holders, rarity |
-| `nft_rarity` | $0.003 | Token rarity rank, score, trait floor prices |
-| `nft_metadata` | $0.003 | NFT metadata: name, image, attributes, collection info |
+| `nft_collection` | $0.012 | Collection floor price, volume, holders, rarity |
+| `nft_rarity` | $0.008 | Token rarity rank, score, trait floor prices |
+| `nft_metadata` | $0.008 | NFT metadata: name, image, attributes, collection info |
 
 ### Solana — 4 tools
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `solana_launches` | $0.003 | New token launches: pump.fun, Raydium |
-| `jupiter_quotes` | $0.002 | Jupiter aggregator swap quotes |
+| `solana_launches` | $0.008 | New token launches: pump.fun, Raydium |
+| `jupiter_quotes` | $0.005 | Jupiter aggregator swap quotes |
 | `solana_fees` | $0.003 | Priority fee estimates at 6 levels |
-| `solana_pools` | $0.003 | DEX pool liquidity: Raydium, Orca, Meteora |
+| `solana_pools` | $0.008 | DEX pool liquidity: Raydium, Orca, Meteora |
 
 ### Trust & Security — 8 tools
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `trust_score` | $0.01 | Unified trust scoring 0-100: domains, wallets, APIs |
-| `token_safety` | $0.003 | Rug pull detection: honeypot, liquidity, ownership |
-| `domain_intelligence` | $0.005 | Full domain intel: DNS, WHOIS, SSL, registrar |
-| `ssl_checker` | $0.002 | SSL/TLS cert: validity, expiry, chain, grade |
+| `trust_score` | $0.02 | Unified trust scoring 0-100: domains, wallets, APIs |
+| `token_safety` | $0.008 | Rug pull detection: honeypot, liquidity, ownership |
+| `domain_intelligence` | $0.012 | Full domain intel: DNS, WHOIS, SSL, registrar |
+| `ssl_checker` | $0.005 | SSL/TLS cert: validity, expiry, chain, grade |
 | `http_headers` | $0.003 | HTTP security headers: HSTS, CSP, server detection |
-| `port_scanner` | $0.003 | TCP port scan: open/closed, response time |
+| `port_scanner` | $0.008 | TCP port scan: open/closed, response time |
 | `password_strength` | $0.003 | Password score 0-100, entropy, crack time |
 | `jwt_decoder` | $0.003 | JWT decode: header, payload, claims, expiry |
 
 ### B2B Enrichment — 6 tools
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `email_verification` | $0.002 | Email validation: syntax, MX, disposable, score 0-100 |
-| `company_enrichment` | $0.01 | Company data: industry, size, tech, social, founded |
-| `person_enrichment` | $0.01 | Person data: name, role, company, social, location |
-| `email_finder` | $0.005 | Find email from name + domain |
-| `tech_enrichment` | $0.005 | 50+ technologies detected on any website |
-| `social_profile` | $0.008 | Social profiles: Twitter, GitHub, LinkedIn, YouTube |
+| `email_verification` | $0.005 | Email validation: syntax, MX, disposable, score 0-100 |
+| `company_enrichment` | $0.02 | Company data: industry, size, tech, social, founded |
+| `person_enrichment` | $0.02 | Person data: name, role, company, social, location |
+| `email_finder` | $0.012 | Find email from name + domain |
+| `tech_enrichment` | $0.012 | 50+ technologies detected on any website |
+| `social_profile` | $0.015 | Social profiles: Twitter, GitHub, LinkedIn, YouTube |
 
 ### Email — 2 tools
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `email_deliverability` | $0.005 | Deliverability audit: SPF, DKIM, DMARC, score 0-100 |
-| `email_send` | $0.003 | Send emails via Resend: text/HTML, delivery status |
+| `email_deliverability` | $0.012 | Deliverability audit: SPF, DKIM, DMARC, score 0-100 |
+| `email_send` | $0.008 | Send emails via Resend: text/HTML, delivery status |
 
 ### Web & SEO — 6 tools
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `web_scraper` | $0.005 | URL to clean markdown, headless rendering |
+| `web_scraper` | $0.012 | URL to clean markdown, headless rendering |
 | `seo_analyzer` | $0.06 | Full SEO audit: meta, headings, schema, score 0-100 |
-| `screenshot_pdf` | $0.008 | Screenshots (PNG/JPEG/WebP) and PDF capture |
-| `web_search` | $0.003 | Web search: title, URL, snippet, 10 results |
-| `keyword_research` | $0.01 | SEO keywords: Google Suggest, intent, long-tail |
-| `webhook_tester` | $0.002 | Test webhooks: custom methods, headers, latency |
+| `screenshot_pdf` | $0.015 | Screenshots (PNG/JPEG/WebP) and PDF capture |
+| `web_search` | $0.008 | Web search: title, URL, snippet, 10 results |
+| `keyword_research` | $0.02 | SEO keywords: Google Suggest, intent, long-tail |
+| `webhook_tester` | $0.005 | Test webhooks: custom methods, headers, latency |
 
 ### Social — 1 tool
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `twitter_scraper` | $0.005 | Twitter/X profiles, search, timelines. No API key |
+| `twitter_scraper` | $0.012 | Twitter/X profiles, search, timelines. No API key |
 
 ### Network — 3 tools
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `dns_lookup` | $0.002 | DNS records: A, MX, TXT, CNAME via Cloudflare DoH |
-| `ip_geolocation` | $0.003 | IP geolocation: country, city, ISP, VPN detection |
+| `dns_lookup` | $0.005 | DNS records: A, MX, TXT, CNAME via Cloudflare DoH |
+| `ip_geolocation` | $0.008 | IP geolocation: country, city, ISP, VPN detection |
 | `ip_geolocation_batch` | $0.01 | Batch geolocate up to 20 IPs |
 
 ### NLP — 5 tools
@@ -242,59 +242,59 @@ const result = await response.json();
 |------|-------|-----------------|
 | `ai_summarizer` | $0.03 | Summarize text/URLs -- fast extractive summarization |
 | `sentiment_analyzer` | $0.015 | Sentiment, emotions, confidence scores |
-| `text_translator` | $0.005 | Translate 50+ languages with auto-detection |
-| `text_classifier` | $0.005 | Topic classification, readability, content type |
-| `language_detector` | $0.002 | Language detection: 30+ languages, script, confidence |
+| `text_translator` | $0.012 | Translate 50+ languages with auto-detection |
+| `text_classifier` | $0.012 | Topic classification, readability, content type |
+| `language_detector` | $0.005 | Language detection: 30+ languages, script, confidence |
 
 ### Finance — 1 tool
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `stock_price` | $0.002 | Real-time stock quotes: price, change, volume, mcap |
+| `stock_price` | $0.005 | Real-time stock quotes: price, change, volume, mcap |
 
 ### Media — 3 tools
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `image_resize` | $0.003 | Resize images: dimensions, format conversion |
-| `ocr_extract` | $0.005 | OCR text extraction from images |
-| `text_to_speech` | $0.005 | Text to speech: 20+ languages, MP3 output |
+| `image_resize` | $0.008 | Resize images: dimensions, format conversion |
+| `ocr_extract` | $0.012 | OCR text extraction from images |
+| `text_to_speech` | $0.012 | Text to speech: 20+ languages, MP3 output |
 
 ### Text Processing — 8 tools
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `diff_checker` | $0.002 | Line-by-line text diff with similarity score |
+| `diff_checker` | $0.005 | Line-by-line text diff with similarity score |
 | `word_counter` | $0.003 | Words, chars, sentences, paragraphs, reading time |
 | `lorem_ipsum` | $0.003 | Placeholder text: paragraphs, sentences, words |
 | `slug_generator` | $0.003 | URL-friendly slugs with transliteration |
 | `regex_tester` | $0.003 | Regex testing: matches, groups, explanations |
 | `html_to_markdown` | $0.003 | HTML to clean Markdown conversion |
 | `markdown_to_html` | $0.003 | Markdown to HTML conversion |
-| `markdown_renderer` | $0.002 | Markdown to styled HTML (light/dark/GitHub themes) |
+| `markdown_renderer` | $0.005 | Markdown to styled HTML (light/dark/GitHub themes) |
 
 ### Research — 2 tools
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `fact_checker` | $0.005 | Verify claims with evidence and sources |
+| `fact_checker` | $0.012 | Verify claims with evidence and sources |
 | `research_report` | $0.06 | Multi-source research reports in markdown |
 
 ### Compliance — 2 tools
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `gdpr_scanner` | $0.02 | GDPR compliance: consent, privacy, trackers |
-| `pii_detector` | $0.005 | PII detection: emails, SSNs, credit cards, redaction |
+| `gdpr_scanner` | $0.03 | GDPR compliance: consent, privacy, trackers |
+| `pii_detector` | $0.012 | PII detection: emails, SSNs, credit cards, redaction |
 
 ### Validation — 5 tools
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `phone_validation` | $0.003 | Phone validation: carrier, line type, E.164 |
+| `phone_validation` | $0.008 | Phone validation: carrier, line type, E.164 |
 | `phone_validation_batch` | $0.025 | Batch validate up to 50 phones |
-| `sms_validator` | $0.002 | SMS-capable validation with carrier type |
-| `address_validator` | $0.003 | Postal address parsing and normalization |
+| `sms_validator` | $0.005 | SMS-capable validation with carrier type |
+| `address_validator` | $0.008 | Postal address parsing and normalization |
 | `json_validator` | $0.003 | JSON syntax + schema validation |
 
 ### Developer — 1 tool
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `code_sandbox` | $0.01 | Execute Python/JS/SQL in sandbox with output |
+| `code_sandbox` | $0.02 | Execute Python/JS/SQL in sandbox with output |
 
 ### Generators — 5 tools
 | Tool | Price | What it returns |
@@ -308,7 +308,7 @@ const result = await response.json();
 ### Documents — 1 tool
 | Tool | Price | What it returns |
 |------|-------|-----------------|
-| `pdf_generator` | $0.008 | PDF from HTML/Markdown with custom layout |
+| `pdf_generator` | $0.015 | PDF from HTML/Markdown with custom layout |
 
 ### Utility — 8 tools
 | Tool | Price | What it returns |
@@ -326,7 +326,7 @@ const result = await response.json();
 | Tool | Price | What it returns |
 |------|-------|-----------------|
 | `weather` | $0.003 | Current weather + 7-day forecast |
-| `vector_search` | $0.005 | TF-IDF cosine similarity document search |
+| `vector_search` | $0.012 | TF-IDF cosine similarity document search |
 
 ## How x402 Payment Works
 
