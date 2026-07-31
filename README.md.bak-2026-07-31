@@ -135,7 +135,7 @@ const result = await response.json();
 | `hyperliquid_data` | $0.003 | Perp markets: prices, open interest, 24h volume, orderbook depth for 229 markets |
 | `hyperliquid_whales` | $0.008 | Whale positions: sizes, PnL, entry prices, leverage |
 | `hl_vaults` | $0.008 | Vault summaries: APR, TVL, PnL, depositor count |
-| `hl_funding` | $0.002 | Funding rates: current, 1h, 8h, 24h with arb scanner |
+| `hl_funding` | $0.005 | Funding rates: current, 1h, 8h, 24h with arb scanner |
 | `hl_portfolio` | $0.008 | Account analysis: positions, PnL, fills, open orders, funding |
 | `hl_spot` | $0.005 | 454 spot tokens: prices, volume, wallet balances |
 
@@ -156,8 +156,8 @@ const result = await response.json();
 | `defi_yields` | $0.005 | Best DeFi yields: APY, TVL, risk scores |
 | `whale_alert` | $0.008 | Large crypto transactions and whale movements |
 | `crypto_news` | $0.005 | Crypto news with sentiment scores |
-| `funding_arb` | $0.002 | Funding rate arbitrage across exchanges |
-| `funding_rates` | $0.001 | Scan all perps ranked by funding, or one asset across Binance, Bybit, OKX |
+| `funding_arb` | $0.012 | Funding rate arbitrage across exchanges |
+| `funding_rates` | $0.005 | Live perp funding: Binance, Bybit, OKX, open interest |
 | `ens_resolver` | $0.005 | ENS name resolution and reverse lookup |
 | `token_holders` | $0.012 | Token holder distribution: whale count, concentration |
 | `token_ohlcv` | $0.005 | Historical OHLCV candles |
@@ -169,7 +169,7 @@ const result = await response.json();
 | Tool | Price | What it returns |
 |------|-------|-----------------|
 | `base_defi` | $0.008 | Base chain yields: Aerodrome LP, Moonwell lending |
-| `liquidation_oracle` | $0.003 | Liquidation levels: Aave, Compound, Morpho positions |
+| `liquidation_oracle` | $0.008 | Liquidation levels: Aave, Compound, Morpho positions |
 | `orderbook_depth` | $0.012 | Uniswap V3 liquidity depth and slippage estimation |
 
 ### NFT — 3 tools
@@ -235,7 +235,7 @@ const result = await response.json();
 |------|-------|-----------------|
 | `dns_lookup` | $0.005 | DNS records: A, MX, TXT, CNAME via Cloudflare DoH |
 | `ip_geolocation` | $0.008 | IP geolocation: country, city, ISP, VPN detection |
-| `ip_geolocation_batch` | $0.02 | Batch geolocate up to 20 IPs |
+| `ip_geolocation_batch` | $0.01 | Batch geolocate up to 20 IPs |
 
 ### NLP — 5 tools
 | Tool | Price | What it returns |
@@ -286,7 +286,7 @@ const result = await response.json();
 | Tool | Price | What it returns |
 |------|-------|-----------------|
 | `phone_validation` | $0.008 | Phone validation: carrier, line type, E.164 |
-| `phone_validation_batch` | $0.035 | Batch validate up to 50 phones |
+| `phone_validation_batch` | $0.025 | Batch validate up to 50 phones |
 | `sms_validator` | $0.005 | SMS-capable validation with carrier type |
 | `address_validator` | $0.008 | Postal address parsing and normalization |
 | `json_validator` | $0.003 | JSON syntax + schema validation |
