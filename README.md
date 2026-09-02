@@ -10,7 +10,7 @@ The largest collection of x402-compatible tools for autonomous AI agents. Built 
 
 | Feature | x402-agent-tools | StableEnrich | httpay | BlockRun |
 |---------|-----------------|--------------|--------|----------|
-| Tools available | **103** | ~12 | ~8 | ~15 |
+| Tools available | **102** | ~12 | ~8 | ~15 |
 | Avg price/call | **$0.003** | $0.01-0.05 | $0.01-0.03 | $0.01-0.05 |
 | API keys needed | **None** | Yes | Yes | Yes |
 | Subscription | **None** | Monthly | Monthly | Monthly |
@@ -49,7 +49,7 @@ const route = await client.call("bridge_routes", {
 
 ## Vercel AI SDK Integration
 
-Use this when building AI agents with Vercel AI SDK. Returns all 103 tools as Vercel-compatible tool objects with automatic x402 payment handling.
+Use this when building AI agents with Vercel AI SDK. Returns all 102 tools as Vercel-compatible tool objects with automatic x402 payment handling.
 
 ```typescript
 import { createClient } from "x402-agent-tools";
@@ -125,7 +125,7 @@ const response = await paidFetch("https://trust-score.api.klymax402.com/api/scor
 const result = await response.json();
 ```
 
-## All 103 Tools
+## All 102 Tools
 
 ### Hyperliquid Suite — 7 tools
 *#1 Hyperliquid data provider on x402. Complete DEX coverage.*
@@ -213,7 +213,6 @@ const result = await response.json();
 | Tool | Price | What it returns |
 |------|-------|-----------------|
 | `email_deliverability` | $0.012 | Deliverability audit: SPF, DKIM, DMARC, score 0-100 |
-| `email_send` | $0.008 | Send emails via Resend: text/HTML, delivery status |
 
 ### Web & SEO — 6 tools
 | Tool | Price | What it returns |
@@ -368,7 +367,7 @@ console.log(client.listCategories());
 // Get tools in a category
 const cryptoTools = client.getToolsByCategory("hyperliquid");
 
-// List all 103 tools
+// List all 102 tools
 const all = client.listTools();
 ```
 
@@ -380,7 +379,7 @@ const all = client.listTools();
 
 **Security Agent** — Use `trust_score` + `token_safety` + `ssl_checker` + `port_scanner` + `gdpr_scanner` to audit websites, tokens, and infrastructure. Generate compliance reports automatically.
 
-**Sales Agent** — Use `email_finder` + `company_enrichment` + `person_enrichment` + `email_verification` + `email_send` to build outbound sales pipelines. Find, enrich, verify, and contact leads at scale.
+**Sales Agent** — Use `email_finder` + `company_enrichment` + `person_enrichment` + `email_verification` to build outbound sales pipelines. Find, enrich and verify leads at scale.
 
 **DeFi Agent** — Use `defi_yields` + `base_defi` + `bridge_routes` + `dex_quotes` + `wallet_portfolio` to optimize yield farming, find bridge routes, and manage multi-chain portfolios.
 
@@ -395,8 +394,8 @@ const all = client.listTools();
 
 klymax402 publishes a machine-readable catalog for AI systems and LLM crawlers:
 
-- **llms.txt**: [klymax402.com/llms.txt](https://klymax402.com/llms.txt) — full API catalog in llms.txt format (100 APIs, pricing, MCP install snippets, x402 payment reference)
-- **MCP endpoint**: `https://klymax402.com/mcp` — self-hosted MCP gateway, all 100 APIs, Streamable HTTP
+- **llms.txt**: [klymax402.com/llms.txt](https://klymax402.com/llms.txt) — full API catalog in llms.txt format (99 APIs, pricing, MCP install snippets, x402 payment reference)
+- **MCP endpoint**: `https://klymax402.com/mcp` — self-hosted MCP gateway, all 99 APIs, Streamable HTTP
 - **Live stats**: [klymax402.com/stats](https://klymax402.com/stats/) — 99.9% uptime, P50 57ms, P95 104ms, 766 txs on-chain
 
 Compatible with Claude, Claude Code, Cursor, Codex, and ElizaOS (plugin: `eliza-plugin-klymax402`).

@@ -490,16 +490,6 @@ export const CATALOG: ApiTool[] = [
     required: ["domain"],
   },
   {
-    name: "email_send",
-    description: "Send emails programmatically via Resend -- text or HTML, delivery status, message ID",
-    url: "https://email-send.api.klymax402.com",
-    method: "POST",
-    path: "/api/send",
-    price: "$0.008", category: "email",
-    parameters: { "to": { type: "string", description: "Recipient email address" }, "from": { type: "string", description: "Sender email address (default: noreply@x402.dev)" }, "subject": { type: "string", description: "Email subject line" }, "body": { type: "string", description: "Email body content (plain text)" }, "html": { type: "string", description: "Email body content (HTML, optional — overrides body)" } },
-    required: ["to","subject","body"],
-  },
-  {
     name: "web_scraper",
     description: "Extract clean markdown from any URL. Headless browser rendering. Batch support",
     url: "https://web-scraper.api.klymax402.com",
